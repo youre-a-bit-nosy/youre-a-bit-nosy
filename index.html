@@ -1,44 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nosy fucker, aren't you?</title>
-    <style>
-        /* Reset default margins and padding */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nosy fucker, aren't you?</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        /* Apply full viewport width and height */
-        html, body {
-            height: 100%;
-            width: 100%;
-            display: flex;
-            flex-direction: column; /* <--- This makes children stack vertically */
-            justify-content: center;
-            align-items: center;
-            background-color: white;
-            color: black;
-            font-family: 'Arial', sans-serif;
-        }
+    html, body {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: white;
+      color: black;
+      font-family: 'Arial', sans-serif;
+    }
 
-        /* Style the text */
-        h1 {
-            font-size: 10vw; /* Responsive font size */
-            text-align: center;
-            margin: 0;
-        }
-        h2 {
-            font-size: 1vw; /* Responsive font size */
-            text-align: center;
-            margin: 0;
-        }
-    </style>
+    h1 {
+      font-size: 10vw;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 1.5vw;
+      text-align: center;
+      margin-top: 1rem;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+
+    h2.show {
+      opacity: 1;
+    }
+  </style>
 </head>
 <body>
-    <h1>Hey.<br>Fuck You.<br></h1><h2>Just kidding.</h2><h1>🤘</h1>
+  <h1>Fuck You.</h1>
+  <h2 id="kidding">Just kidding.</h2>
+  <h1>🤘</h1>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Muc6TJXVfq4?si=OMpJHfMjurN0QXvG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <script>
+    // Wait 3 seconds, then show the "Just kidding" text
+    setTimeout(() => {
+      document.getElementById('kidding').classList.add('show');
+    }, 1500);
+  </script>
 </body>
 </html>
