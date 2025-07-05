@@ -61,7 +61,7 @@
   <h2 id="kidding">Just kidding.</h2>
   <h1>🤘</h1><br>
 <div class="video-container">
-  <iframe 
+  <iframe id="ytVideo"
     src="https://www.youtube.com/embed/Muc6TJXVfq4?si=OMpJHfMjurN0QXvG"
     frameborder="0"
     allowfullscreen>
@@ -72,6 +72,10 @@
     setTimeout(() => {
       document.getElementById('kidding').classList.add('show');
     }, 1500);
+        // Show video after 3 seconds
+    setTimeout(() => {
+      document.getElementById('ytVideo').classList.add('show');
+    }, 3000);
   </script>
 </body>
 </html>
